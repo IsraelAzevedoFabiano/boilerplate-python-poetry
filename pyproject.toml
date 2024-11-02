@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Boilerplate para projetos que usem python e poetry."
 authors = ["IsraelAzevedoFabiano <israelazevedofabiano@gmail.com>"]
 readme = "README.md"
+packages = [{ include = "*", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.12.4"
@@ -38,9 +39,6 @@ run = 'fastapi dev fast_zero/app.py'
 pre_test = 'task lint'
 test = 'pytest -s -x --cov=fast_zero -vv'
 post_test = 'coverage html'
-
-[tool.poetry.packages]
-packages = [{ include = "*", from = "src" }]
 
 [build-system]
 requires = ["poetry-core"]
